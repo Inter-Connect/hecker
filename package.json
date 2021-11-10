@@ -1,0 +1,27 @@
+{
+  "name": "@-interconnect/hecker",
+  "version": "1.0.0",
+  "description": "A CLI to make your friends think you're a really good hecker",
+  "main": "src/index.js",
+  "bin": {
+    "@-interconnect/hecker": "bin/hecker",
+    "hecker": "bin/hecker"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "hecker"
+  ],
+  "author": "YOUR_AUTHOR",
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^5.0.1",
+    "esm": "^3.2.18",
+    "inquirer": "^8.2.0"
+  }
+}
