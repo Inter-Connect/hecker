@@ -1,6 +1,6 @@
 {
   "name": "@-interconnect/hecker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI to make your friends think you're a really good hecker",
   "main": "src/index.js",
   "bin": {
