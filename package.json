@@ -1,6 +1,6 @@
 {
   "name": "hecker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI to make your friends think you're a really good hecker",
   "main": "src/index.js",
   "bin": {
