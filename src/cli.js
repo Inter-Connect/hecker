@@ -6,9 +6,11 @@ function parseArgumentsIntoOptions(rawArgs) {
      '--mainframe': Boolean,
      '--change': Boolean,
      '--exit': Boolean,
+     '--noconfirm': Boolean,
      '-m': '--mainframe',
      '-c': '--change',
      '-e': '--exit',
+     '-n': '--noconfirm',
    },
    {
      argv: rawArgs.slice(2),
@@ -18,6 +20,7 @@ function parseArgumentsIntoOptions(rawArgs) {
    mainframe: args['--mainframe'] || false,
    change: args['--change'] || false,
    exit: args['--exit'] || false,
+   noconfirm: args['--noconfirm'] || false,
  };
 }
 
@@ -26,7 +29,9 @@ function getRandomInt(max) {
   }
 
 async function getReturn(options) {
-    var endlog = []
+    var endlog = [
+      'Heking...'
+    ]
     const emails = [
         "bigbossperson@gmail.com",
         "carsextendedwarrenty@gmail.com",
@@ -61,7 +66,9 @@ async function getReturn(options) {
         await endlog.push('Logging out\n');
         await endlog.push('Out with no evidence\n');
     }
-    endlog.push('The totally real hack is complete.')
+    if(options.noconfirm === false) {
+      endlog.push('The totally real hack is complete.')
+    }
     for(let i = 0; i < endlog.length; i++) {
         console.log(endlog[i])
         sleep(getRandomInt(100) + 200)
